@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>The following coins were identified:</p>
+    <ul>
+        {% for coin in coins %}
+        <li>{{ coin }}</li>
+        {% endfor %}
+    </ul>
+    <img src="{{ url_for('static', filename='uploads/' + filepath) }}" alt="Uploaded Image">
+    <a href="{{ url_for('home') }}">Upload another image</a>
+</body>
+</html>
